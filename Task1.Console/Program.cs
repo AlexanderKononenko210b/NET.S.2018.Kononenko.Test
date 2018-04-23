@@ -15,7 +15,7 @@ namespace Task1.Console
         {
             var repository = new SqlRepository();
 
-            IValidator[] validator = new IValidator[6] { new NullValidator(), new EmptyValidator(), new LeftLengthValidator(),
+            List<IValidator> validator = new List<IValidator> { new NullValidator(), new EmptyValidator(), new LeftLengthValidator(),
                 new RightLengthValidator(), new LetterValidator(), new NumberValidator()};
 
             var passwordCheckerService = new PasswordCheckerService(repository, validator);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Task1.Solution
@@ -7,9 +8,9 @@ namespace Task1.Solution
     {
         private IRepository repository;
 
-        private IValidator[] validator;
+        private IEnumerable<IValidator> validator;
 
-        public PasswordCheckerService(IRepository repository, params IValidator[] validator)
+        public PasswordCheckerService(IRepository repository, IEnumerable<IValidator> validator)
         {
             this.repository = repository;
 
