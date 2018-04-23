@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task3.Solution
 {
-    public class Broker : IObserver
+    public class Broker
     {
         public string Name { get; set; }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task3.Solution
 {
-    public class Bank : IObserver
+    public class Bank
     {
         public string Name { get; set; }
 
