@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Task1
+namespace Task1.Solution
 {
     public class PasswordCheckerService
     {

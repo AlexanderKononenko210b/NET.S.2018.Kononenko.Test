@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Task1.Validators;
+using Task1.Solution;
+using Task1.Solution.Validators;
 
 namespace Task1.Console
 {
@@ -14,14 +15,8 @@ namespace Task1.Console
         {
             var repository = new SqlRepository();
 
-            var validator = new SqlValidator();
-
-            validator.Add(new NullValidator());
-            validator.Add(new EmptyValidator());
-            validator.Add(new LeftLengthValidator());
-            validator.Add(new RightLengthValidator());
-            validator.Add(new LetterValidator());
-            validator.Add(new NumberValidator());
+            IValidator[] validator = new IValidator[6] { new NullValidator(), new EmptyValidator(), new LeftLengthValidator(),
+                new RightLengthValidator(), new LetterValidator(), new NumberValidator()};
 
             var passwordCheckerService = new PasswordCheckerService(repository, validator);
 

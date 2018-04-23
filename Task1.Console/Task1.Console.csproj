@@ -52,9 +52,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Task1\Task1.csproj">
-      <Project>{bdb58e71-caea-48a4-aebf-23e4d925d60a}</Project>
-      <Name>Task1</Name>
+    <ProjectReference Include="..\Task1.Solution\Task1.Solution.csproj">
+      <Project>{f761c34a-ba2a-45c1-9094-8f4a470ee4b2}</Project>
+      <Name>Task1.Solution</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
