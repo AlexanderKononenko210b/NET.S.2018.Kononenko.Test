@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task2.Solution;
 
 namespace Task2.Console
 {
@@ -10,6 +11,13 @@ namespace Task2.Console
     {
         static void Main(string[] args)
         {
+            FileGenerator fileGenerator = new RandomCharsFileGenerator();
+
+            fileGenerator.GenerateFiles(3, 20);
+
+            fileGenerator = new RandomBytesFileGenerator();
+
+            fileGenerator.GenerateFiles(3, 20);
         }
     }
 }
