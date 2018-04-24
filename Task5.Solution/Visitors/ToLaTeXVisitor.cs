@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task5.Solution.Visitors
 {
-    public class ToLaTeXVisitor : DocumentVisitor
+    public class ToLaTeXVisitor : DocumentPartVisitor
     {
         public string Result { get; private set; } = String.Empty;
 

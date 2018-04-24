@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task5.Solution.Visitors
 {
-    public class ToHtmlVisitor : DocumentVisitor
+    public class ToHtmlVisitor : DocumentPartVisitor
     {
         public string Result { get; private set; } = String.Empty;
 

@@ -6,15 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task5.Solution
 {
-    public abstract class DocumentVisitor
+    public abstract class DocumentPartVisitor
     {
-        public void DynamicVisit(IEnumerable<DocumentPart> parts)
-        {
-            foreach (DocumentPart item in parts)
-            {
-                Visit((dynamic)item);
-            }
-        }
+        public void DynamicVisit(DocumentPart parts) => Visit((dynamic)parts);
 
         protected abstract string Visit(PlainText part);
 

@@ -5,7 +5,18 @@ namespace Task5.Solution
 {
     public class Document
     {
-        internal List<DocumentPart> parts;
+        private List<DocumentPart> parts;
+
+        public IEnumerable<DocumentPart> Parts
+        {
+            get
+            {
+                foreach (DocumentPart item in parts)
+                {
+                    yield return item;
+                }
+            }
+        }
 
         public Document(IEnumerable<DocumentPart> parts)
         {
